@@ -12,13 +12,13 @@
     <div id="container">
         <nav class="navbar">
             <div class="max-width">
-                <div class="logo"><a href="#">Logo</a></div>
+                <div class="logo"><a href="#">AR<span>JUN</span></a></div>
                 <ul class="menu">
-                    <li><a href="#home">Home</a></li>
-                    <li><a href="#about">About</a></li>
-                    <li><a href="#skills">Skills</a></li>
-                    <li><a href="">Projects</a></li>
-                    <li><a href="">Contact</a></li>
+                    <li><a onclick="closeMenu()" href="#home">Home</a></li>
+                    <li><a onclick="closeMenu()"  href="#about">About</a></li>
+                    <li><a onclick="closeMenu()"  href="#skills">Skills</a></li>
+                    <li><a onclick="closeMenu()"  href="#project">Projects</a></li>
+                    <li><a onclick="closeMenu()"  href="#contact">Contact</a></li>
                 </ul>
                 <div class="menu-btn">
                     <i onclick="toggleMenu()" class="fas fa-bars"></i>
@@ -33,7 +33,7 @@
                 <div class="home-content">
                     <div class="text-1">Hello, my name is</div>
                     <div class="text-2">Arjun</div>
-                    <div class="text-3">And I'm a <span>Developer</span></div>
+                    <div class="text-3">And I'm a <span class="typed-text"></span><span class="cursor">&nbsp;</span></div>
                 </div>
             </div>
             <img src="images/laptop.jpg">
@@ -50,8 +50,8 @@
                     </div>
                     <div class="column right">
                         <div class="text">I'm Arjun and I'm a <span>Developer</span></div>
-                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Suscipit amet quis dolores cum dolore aperiam placeat itaque inventore alias laudantium voluptate sapiente, unde aliquam fuga expedita adipisci voluptas libero provident magni harum, pariatur consequuntur? Facilis harum sed soluta enim, commodi beatae. A blanditiis eius consectetur quaerat nemo quisquam porro culpa minima corporis. Obcaecati molestias necessitatibus unde veniam ab rerum facilis!</p>
-                        <a>Download CV</a>
+                        <p>I'm a Mechanical Engineer by qualification, having graduated with a BE from Monash University and a ME from the University of Melbourne. I have always had a keen interest in programming, robotics and the aerospace industry, leading me to have stints in GE Power, ABB Robotics and SDMK (Aerospace). Through a stroke of luck and a twist of fate, I am currently in the SET program at Invoke training to be a full time Software Engineer, allowing me to fullfil one of my passions, which is programming.</p>
+                        <a onclick="window.open('projects/CV_Arjun_MY.pdf','_blank')">Download CV</a>
                     </div>
                 </div>
             </div>
@@ -63,7 +63,7 @@
                 <div class="skills-content">
                     <div class="column left">
                         <div class="text">My skills & experiences.</div>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Vel nam quia incidunt quisquam doloremque cumque quo aperiam culpa delectus libero facilis ducimus nesciunt nisi quaerat in asperiores, at, minima ut sequi eum rerum! Officia repellendus inventore ipsam fugit similique ducimus culpa, optio necessitatibus labore mollitia, ipsa, quae minus sunt aut tenetur ex temporibus laudantium voluptas aliquam modi vel eligendi? Numquam.</p>
+                        <p>Having graduated as a Mechanical Engineer, and worked as a Robotics and Design Engineer, I am familiar with CAD software such as SolidWorks. In addition, due to my keen interest in coding, I took and passed a course in Basic Python language offered through MITx, to familiarise myself with one of the most popular programming languages in the world. Furthermore, being enrolled in the SET program has offered me the chance to improve my knowledge and skills in utilising HTML, CSS and Javascript for web design.</p>
                     </div>
                     <div class="column right">
                         <div class="bars">
@@ -76,76 +76,146 @@
                         <div class="bars">
                             <div class="info">
                                 <span>CSS</span>
-                                <span>60%</span>
+                                <span>70%</span>
                             </div>
                             <div class="line css"></div>
                         </div>
                         <div class="bars">
                             <div class="info">
                                 <span>Javascript</span>
-                                <span>90%</span>
+                                <span>80%</span>
                             </div>
                             <div class="line js"></div>
                         </div>
                         <div class="bars">
                             <div class="info">
                                 <span>Python</span>
-                                <span>80%</span>
+                                <span>60%</span>
                             </div>
                             <div class="line py"></div>
+                        </div>
+                        <div class="bars">
+                            <div class="info">
+                                <span>SolidWorks</span>
+                                <span>95%</span>
+                            </div>
+                            <div class="line sw"></div>
                         </div>
                     </div>
                 </div>
             </div>
         </section>
         
-        <section class="project" id="projects">
+        <section class="project" id="project">
             <div class="max-width">
                 <h2 class="title">Past Projects</h2>
-                <div class="carousel">
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/piano.PNG" alt="">
-                            <div class="text">Piano</div>
-                            <p>9 musical notes coded to 9 keys on the keyboard, with keypress animations to give a realistic feel of playing the piano.</p>
+                <div class="project-content">
+                    <div onclick="carouselMove(-1)" class="prev"><i class="fas fa-arrow-left"></i></div>
+                    <!-- <div class="package"> -->
+                        <div class="carousel" id="carousel">
+                            <div class="card" onclick="window.open('projects/piano/index.html','_blank')">
+                                <div class="box">
+                                    <img src="images/piano.PNG" alt="">
+                                    <div class="text">Piano</div>
+                                    <p style="font-size: 12px;">9 musical notes coded to 9 keys on the keyboard, with keypress animations.</p>
+                                </div>
+                            </div>
+                            <div class="card" onclick="window.open('projects/music/index.html','_blank')">
+                                <div class="box">
+                                    <img src="images/music.PNG" alt="">
+                                    <div class="text">Music Player</div>
+                                    <p style="font-size: 12px;">Music player, with ability to play, pause, mute and increase and decrease volume.</p>
+                                </div>
+                            </div>
+                            <div class="card" onclick="window.open('projects/video/index.html','_blank')">
+                                <div class="box">
+                                    <img src="images/video.PNG" alt="">
+                                    <div class="text">Video Player</div>
+                                    <p style="font-size: 12px;">Video player, with ability to play, pause, mute and increase and decrease volume.</p>
+                                </div>
+                            </div>
+                            <div class="card" onclick="window.open('projects/parallax/index.html','_blank')">
+                                <div class="box">
+                                    <img src="images/parallax.PNG" alt="">
+                                    <div class="text">Parallax Effect</div>
+                                    <p style="font-size: 12px;">Showcasing parallax effect on webpage.</p>
+                                </div>
+                            </div>
+                            <div class="card" onclick="window.open('projects/todo/index.html','_blank')">
+                                <div class="box">
+                                    <img src="images/todolist.PNG" alt="">
+                                    <div class="text">To Do List</div>
+                                    <p style="font-size: 12px;">To do list, with ability to store new tasks, complete, edit and delete tasks.</p>
+                                </div>
+                            </div>
+                            <div class="card" onclick="window.open('projects/chat/index.html','_blank')">
+                                <div class="box">
+                                    <img src="images/chat.PNG" alt="">
+                                    <div class="text">Chat Box</div>
+                                    <p style="font-size: 12px;">Chat Box, with ability to store conversations to display on next usage.</p>
+                                </div>
+                            </div>
                         </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/music.PNG" alt="">
-                            <div class="text">Music Player</div>
-                            <p>Music player, with ability to play, pause, mute and increase and decrease volume.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/video.PNG" alt="">
-                            <div class="text">Video Player</div>
-                            <p>Video player, with ability to play, pause, mute and increase and decrease volume.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/parallax.PNG" alt="">
-                            <div class="text">Parallax Effect</div>
-                            <p>Showcasing parallax effect on webpage.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/todolist.PNG" alt="">
-                            <div class="text">To Do List</div>
-                            <p>To do list, with ability to store new tasks, complete, edit and delete tasks.</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="box">
-                            <img src="images/chat.PNG" alt="">
-                            <div class="text">Chat Box</div>
-                            <p>Chat Box, with ability to store conversations to display on next usage.</p>
-                        </div>
-                    </div>
+                    <!-- </div> -->
+                    <div onclick="carouselMove(1)" class="next"><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+        </section>
 
+        <!-- Contact section start -->
+        <section class="contact" id="contact">
+            <div class="max-width">
+                <h2 class="title">Contact Me!</h2>
+                <div class="contact-content">
+                    <div class="column left">
+                        <div class="text">Get in Touch</div>
+                        <p>I am always open to receiving connection requests, whether for a professional or social reason. Please feel free to reach out if you think I may be able to offer something of use to you.</p>
+                        <div class="icons">
+                            <div class="row">
+                                <i class="fas fa-user"></i>
+                                <div class="info">
+                                    <div class="head">Name</div>
+                                    <div class="sub-title">Arjun Rvan</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-map-marker-alt"></i>
+                                <div class="info">
+                                    <div class="head">Address</div>
+                                    <div class="sub-title">Kuala Lumpur, Malaysia</div>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <i class="fas fa-envelope"></i>
+                                <div class="info">
+                                    <div class="head">Email</div>
+                                    <div class="sub-title">arjunrvan@invokeisdata.com</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="column right">
+                        <div class="text">Message Me</div>
+                        <form action="#">
+                            <div class="fields">
+                                <div class="field name">
+                                    <input type="text" placeholder="Name" required>
+                                </div>
+                                <div class="field email">
+                                    <input type="email" placeholder="Email" required>
+                                </div>
+                            </div>
+                            <div class="field">
+                                <input type="text" placeholder="Subject" required>
+                            </div>
+                            <div class="field textarea">
+                                <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
+                            </div>
+                            <div class="button-area">
+                                <button type="submit">Send message</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </section>

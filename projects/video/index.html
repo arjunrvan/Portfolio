@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Video Player</title>
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+        <link href="styles.css" rel="stylesheet"/>
+    </head>
+
+    <body>
+        <div id="container">
+            <h1>Video Player</h1>
+            <br/>
+            <video id="vid" src="movie.mp4" width="600px" controls autoplay muted></video>
+
+            <br/><br/>
+
+            <div id="first-row">
+                <div id="switch-btn" class="vid-btn" onclick="playAlt()">
+                    <i class="fas fa-play"></i>
+                </div>
+
+                <div id="mute-btn" class="vid-btn" onclick="muteVol()" ><i class="fas fa-volume-mute"></i></div>
+
+                <div id="fs-btn" class="vid-btn" onclick="fsMode()"><i class="fas fa-expand"></i></div>
+
+                <div id="playback">
+                    <h3>Playback Rate</h3>
+                    <br/>
+                    <div id="pb-btn" onclick="pbMode(1)"><<</div>
+                    <p id="pbRate">1.0</p>
+                    <div id="pb-btn" onclick="pbMode(2)">>></div>
+                </div>
+
+            </div>
+
+            <br/>
+            <div class="vol-nav">
+                <div class="vid-btn" onclick="updateVol(-0.1)"><i class="fas fa-volume-down"></i></div>
+<!-- 
+                <div id="vol-bar">
+                    <div id="vol-left"></div>
+                </div> -->
+
+                <div id="vol-bar2">
+                    <div id="bar1" style="height: 10%;" class="white-bar"></div>
+                    <div id="bar2" style="height: 20%;" class="white-bar"></div>
+                    <div id="bar3" style="height: 30%;"class="white-bar"></div>
+                    <div id="bar4" style="height: 40%;"class="white-bar"></div>
+                    <div id="bar5" style="height: 50%;"class="white-bar"></div>
+                    <div id="bar6" style="height: 60%;"class="white-bar"></div>
+                    <div id="bar7" style="height: 70%;"class="white-bar"></div>
+                    <div id="bar8" style="height: 80%;"class="white-bar"></div>
+                    <div id="bar9" style="height: 90%;"class="white-bar"></div>
+                    <div id="bar10" style="height: 100%;"class="white-bar"></div>
+                </div>
+
+                <div class="vid-btn" onclick="updateVol(0.1)"><i class="fas fa-volume-up"></i></div>
+            </div>
+            <br/>
+
+            <div>
+                <div id="alt-button" onclick="vidSwap(1)"><i class="fas fa-chevron-left"></i> Prev  </div>
+
+                <div id="alt-button" onclick="vidSwap(2)">  Next <i class="fas fa-chevron-right"></i></div>
+            </div>
+        </div>
+
+        <script src="script.js"></script>
+    </body>
+</html>

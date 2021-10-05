@@ -1,0 +1,175 @@
+* {margin: 0; padding: 0; box-sizing: border-box;}
+
+#container {
+    margin: 0 auto;
+    width: 800px;
+}
+
+#container1 {
+    width: 800px;
+    height: 600px;
+    position: relative;
+    overflow: hidden;
+    background-repeat: repeat-x;
+    /* border: 1px solid black; */
+}
+
+#layerOne, #layerTwo, #layerThree, #layerFour, #layerFive {
+    /* width: 1000px;
+    height: 500px; */
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+}
+
+#layerOne {
+    width: 1000px;
+    height: 600px;
+    background-image: url(img/person.png);
+    z-index: 10;
+    left: -100px;
+    top: 250px;
+    background-position-y: bottom;
+}
+
+#layerTwo {
+    background-image: url(img/mountain1.png);
+    z-index: 9;
+    top: 400px;
+    width: 1000px;
+    height: 600px;
+}
+
+#layerThree {
+    width: 1000px;
+    height: 600px;
+    background-image: url(img/mountain2.png);
+    z-index: 8;
+    top: 200px;
+    left: -50px;
+}
+#layerFour {
+    width: 1000px;
+    height: 600px;
+    background-image: url(img/mountain3.png);
+    z-index: 7;
+    top: 200px;
+}
+
+#layerFive {
+    width: 1000px;
+    height: 1000px;
+    background-image: url(img/image.jpg);
+    z-index: 6;
+    top: -100px;
+    /* left: 100px; */
+}
+
+#container2 {
+    width: 800px;
+    height: 200px;
+    margin: 100px 0;
+    position: relative;
+    overflow: hidden;
+    /* background-repeat: repeat-x; */
+    /* border: 1px solid black; */
+    background-image: linear-gradient(-45deg, #ee7752,#e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradient 10s ease infinite;
+
+}
+
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.layer {
+    position: absolute;
+    background-repeat: no-repeat;
+    background-size: contain;
+    width: 1000px;
+    height: 200px;
+    background-position-y: bottom;
+}
+
+#layerSix {
+    background-image: url(images/layer_6.png);
+    z-index: 10;
+    top: 0;
+    left: 0;
+}
+
+#layerSeven {
+    background-image: url(images/layer_5.png);
+    z-index: 9;
+}
+
+
+#layerEight {
+    background-image: url(images/layer_4.png);
+    z-index: 8;
+}
+
+
+#layerNine {
+    background-image: url(images/layer_3.png);
+    z-index: 7;
+}
+
+#layerTen {
+    background-image: url(images/layer_2.png);
+    z-index: 6;
+}
+
+
+#layerEleven {
+    background-image: url(images/layer_1.png);
+    z-index: 5;
+}
+
+.fadeIn {
+    animation-name: fadeIn;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+.fadeOut {
+    animation-name: fadeOut;
+    animation-duration: 2s;
+    animation-fill-mode: both;
+}
+
+@keyframes fadeIn {
+    from {
+        transform: translateX(-200px);
+        opacity: 0;
+    }
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeOut {
+    from {
+        transform: translateX(0);
+        opacity: 1;
+    }
+    to {
+        transform: translateX(200px);
+        opacity: 0;
+    }
+}
+
+
+
+
+
