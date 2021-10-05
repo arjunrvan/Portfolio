@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<head>
+<meta charset="utf-8" />
+<title>AUDIO PLAY PAUSE</title>
+<script>
+	 
+	function doPlay(){
+		document.getElementById("song1").play();
+	}
+	function doPause(){
+		document.getElementById("song1").pause();
+	}
+	function volumeUp(){
+		document.getElementById("song1").volume += 0.1;
+	}
+	function volumeDown(){
+		document.getElementById("song1").volume -= 0.1;
+	} 
+	 //http://www.html5tutorial.info/html5-audio.php
+</script>
+</head>
+
+<body>
+
+  <audio id="song1" src="bgmusic.mp3" autoplay loop></audio>
+  
+  <div onclick="volumeUp();">Volume +++</div>
+  
+  <div onclick="volumeDown();">Volume ---</div>
+  
+   
+  
+  <div onclick="doPlay();">BTN PLAY</div>
+  
+  <div onclick="doPause();">BTN PAUSE</div>
+
+</body>
+</html>
