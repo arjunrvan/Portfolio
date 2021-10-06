@@ -24,6 +24,48 @@ window.addEventListener('scroll', function () {
     }
 },false)
 
+// // Firebase to store contact messages
+
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
+//   // TODO: Add SDKs for Firebase products that you want to use
+//   // https://firebase.google.com/docs/web/setup#available-libraries
+
+//   // Your web app's Firebase configuration
+//   const firebaseConfig = {
+//     apiKey: "AIzaSyAGs7pXpGkNbummJOc1oKD_yBqvDj2k7BE",
+//     authDomain: "portfolio-8ec7a.firebaseapp.com",
+//     databaseURL: "https://portfolio-8ec7a-default-rtdb.asia-southeast1.firebasedatabase.app",
+//     projectId: "portfolio-8ec7a",
+//     storageBucket: "portfolio-8ec7a.appspot.com",
+//     messagingSenderId: "537574027328",
+//     appId: "1:537574027328:web:f45e0a232d64f02aa7afa5"
+//   };
+
+//   // Initialize Firebase
+//   firebase.initializeApp(firebaseConfig);
+
+//   var nameText = document.querySelector('.name');
+//   var emailText = document.querySelector('.email');
+//   var subjectText = document.querySelector('.subject');
+//   var msgText = document.querySelector('.textarea');
+
+//   function sendData () {
+//       console.log(nameText.value);
+//     firebase.database().ref('portfolio').child('contact').push({
+//         name: nameText.value,
+//         email: emailText.value,
+//         subject: subjectText.value,
+//         msg: msgText.value,
+//     })
+
+//     nameText.value = "";
+//     emailText.value = "";
+//     subjectText.value = "";
+//     msgText.value = "";
+
+//   }
+  
+
 // toggle menu / navbar script 
 
 function closeMenu () {
@@ -69,6 +111,7 @@ function carouselMove (num) {
             prevBtn.style.opacity = '1';
         } else {
             nextBtn.style.opacity = '1';
+            prevBtn.style.opacity = '1';
         }
 
         children[posCar].style.display = 'none';
@@ -109,6 +152,7 @@ function carouselMoveMed (num) {
             prevBtn.style.opacity = '1';
         } else {
             nextBtn.style.opacity = '1';
+            prevBtn.style.opacity = '1';
         }
 
         children[posCar].style.display = 'none';
@@ -149,6 +193,7 @@ function carouselMoveSmall (num) {
             prevBtn.style.opacity = '1';
         } else {
             nextBtn.style.opacity = '1';
+            prevBtn.style.opacity = '1';
         }
 
         children[posCar].style.display = 'none';
@@ -214,7 +259,7 @@ const cursorSpan = document.querySelector('.cursor');
 const textArray = ['Developer','Engineer','Designer'];
 const typingDelay = 200;
 const erasingDelay = 100;
-const newTextDelay = 1500;
+const newTextDelay = 2000;
 
 var textArrayIndex = 0;
 var charIndex = 0;
@@ -250,7 +295,6 @@ function eraseFun () {
 window.addEventListener('DOMContentLoaded', function() {
     if (textArray.length) {setTimeout(typeWriter, newTextDelay)}; 
 })
-
 
 
 

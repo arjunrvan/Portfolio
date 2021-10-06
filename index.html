@@ -3,9 +3,29 @@
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="description" content="Arjun, Developer based in KL, Malaysia">
+    <meta name="keywords" content="Portfolio,Designer,FrontEnd">
+    <meta name="author" content="Arjun Rvan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
+
+    <!-- Twitter Card data -->
+    <meta name="twitter:card" value="Arjun, Developer based in KL, Malaysia">
+
+    <!-- Open Graph data -->
+    <meta property="og:title" content="Arjun Rvan Developer" />
+    <meta property="og:type" content="article" />
+    <meta property="og:url" content="https://arjunrvan.github.io/Portfolio/" />
+    <meta property="og:image" content="http://example.com/image.jpg" />
+    <meta property="og:description" content="Description Here" />
+
+    <title>Arjun Rvan</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="images/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="images/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
     <link href="style.css" rel="stylesheet"/>
 </head>
 <body>
@@ -115,42 +135,42 @@
                         <div class="carousel" id="carousel">
                             <div class="card" onclick="window.open('projects/piano/index.html','_blank')">
                                 <div class="box">
-                                    <img src="images/piano.PNG" alt="">
+                                    <img src="images/piano2.jpg" alt="">
                                     <div class="text">Piano</div>
                                     <p style="font-size: 12px;">9 musical notes coded to 9 keys on the keyboard, with keypress animations.</p>
                                 </div>
                             </div>
                             <div class="card" onclick="window.open('projects/music/index.html','_blank')">
                                 <div class="box">
-                                    <img src="images/music.PNG" alt="">
+                                    <img src="images/music2.jpg" alt="">
                                     <div class="text">Music Player</div>
                                     <p style="font-size: 12px;">Music player, with ability to play, pause, mute and increase and decrease volume.</p>
                                 </div>
                             </div>
                             <div class="card" onclick="window.open('projects/video/index.html','_blank')">
                                 <div class="box">
-                                    <img src="images/video.PNG" alt="">
+                                    <img src="images/video2.jpg" alt="">
                                     <div class="text">Video Player</div>
                                     <p style="font-size: 12px;">Video player, with ability to play, pause, mute and increase and decrease volume.</p>
                                 </div>
                             </div>
                             <div class="card" onclick="window.open('projects/parallax/index.html','_blank')">
                                 <div class="box">
-                                    <img src="images/parallax.PNG" alt="">
+                                    <img src="images/parallax2.jpg" alt="">
                                     <div class="text">Parallax Effect</div>
                                     <p style="font-size: 12px;">Showcasing parallax effect on webpage.</p>
                                 </div>
                             </div>
                             <div class="card" onclick="window.open('projects/todo/index.html','_blank')">
                                 <div class="box">
-                                    <img src="images/todolist.PNG" alt="">
+                                    <img src="images/todolist2.jpg" alt="">
                                     <div class="text">To Do List</div>
                                     <p style="font-size: 12px;">To do list, with ability to store new tasks, complete, edit and delete tasks.</p>
                                 </div>
                             </div>
                             <div class="card" onclick="window.open('projects/chat/index.html','_blank')">
                                 <div class="box">
-                                    <img src="images/chat.PNG" alt="">
+                                    <img src="images/chat2.jpg" alt="">
                                     <div class="text">Chat Box</div>
                                     <p style="font-size: 12px;">Chat Box, with ability to store conversations to display on next usage.</p>
                                 </div>
@@ -205,14 +225,14 @@
                                     <input type="email" placeholder="Email" required>
                                 </div>
                             </div>
-                            <div class="field">
+                            <div class="field subject">
                                 <input type="text" placeholder="Subject" required>
                             </div>
                             <div class="field textarea">
                                 <textarea cols="30" rows="10" placeholder="Message.." required></textarea>
                             </div>
                             <div class="button-area">
-                                <button type="submit">Send message</button>
+                                <button type="submit" onclick="sendData()">Send message</button>
                             </div>
                         </form>
                     </div>
@@ -220,7 +240,11 @@
             </div>
         </section>
     </div>
-    
+
+    <!-- Firebase app -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js"></script>
+    <!-- Firebase real time database -->
+    <script src="https://www.gstatic.com/firebasejs/7.15.3/firebase-database.js"></script>
     
     <script src="script.js"></script>
 </body>
