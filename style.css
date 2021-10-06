@@ -77,8 +77,12 @@ html{
 }
 
 .sticky .menu li a:hover {
-    color: lightgray;
+    color: black;
 }
+
+/* .menu .active li a:hover {
+    color: crimson;
+} */
 
 /* MENU BUTTON STYLING */
 
@@ -519,6 +523,11 @@ section .title::after {
     font-size: 25px;
     font-weight: 500;
     margin: 10px 0 7px 0;
+    color: crimson;
+}
+
+.project .carousel .card:hover .text {
+    color: white;
 }
 
 .project .carousel .card img {

@@ -16,7 +16,7 @@ window.onbeforeunload = function () {
 }
 
 window.addEventListener('scroll', function () {
-    console.log(this.scrollY);
+    // console.log(this.scrollY);
     if (this.scrollY > 20) {
         navBar.classList.add('sticky');
     } else {
@@ -45,15 +45,13 @@ const firebaseConfig = {
 
 firebase.initializeApp(firebaseConfig);
 
-  
-
 function sendData () {
+    alert('Submitted!');
     var nameText = document.querySelectorAll('input')[0];
     var emailText = document.querySelectorAll('input')[1];
     var subjectText = document.querySelectorAll('input')[2];
     var msgText = document.querySelector('textarea');
 
-// console.log(nameText.value);
     firebase.database().ref('users/' + nameText.value).set({
         name: nameText.value,
         email: emailText.value,
@@ -65,10 +63,8 @@ function sendData () {
     emailText.value = "";
     subjectText.value = "";
     msgText.value = "";
-
 }
   
-
 // toggle menu / navbar script 
 
 function closeMenu () {
@@ -86,6 +82,8 @@ function toggleMenu () {
             var menuIcon = menuBtn.firstChild;
             menuIcon.onclick = toggleMenu;
             openMenu = 0;
+            window.scrollTo(0, 0);
+            window.onscroll = function () { window.scrollTo(0, 0);};
             break;
 
         case 0:
@@ -93,6 +91,7 @@ function toggleMenu () {
             var menuIcon = menuBtn.firstChild;
             menuIcon.onclick = toggleMenu;
             openMenu = 1;
+            window.onscroll = function () {};
             break;
 
         default:
@@ -133,6 +132,7 @@ function carouselMove (num) {
             nextBtn.style.opacity = '1';
         } else {
             prevBtn.style.opacity = '1';
+            nextBtn.style.opacity = '1';
         }
 
         children[posCar+2].style.display = 'none';
@@ -174,6 +174,7 @@ function carouselMoveMed (num) {
             nextBtn.style.opacity = '1';
         } else {
             prevBtn.style.opacity = '1';
+            nextBtn.style.opacity = '1';
         }
 
         children[posCar+1].style.display = 'none';
@@ -215,6 +216,7 @@ function carouselMoveSmall (num) {
             nextBtn.style.opacity = '1';
         } else {
             prevBtn.style.opacity = '1';
+            nextBtn.style.opacity = '1';
         }
 
         children[posCar].style.display = 'none';
