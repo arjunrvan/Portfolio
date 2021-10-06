@@ -3,6 +3,7 @@ var menuBtn = document.querySelector('.menu-btn');
 var navBarMenu = document.querySelector('.menu');
 var carousel = document.getElementById('carousel');
 var children = carousel.children;
+var skillCont = document.querySelector('.skills');
 
 var openMenu = 1;
 var posCar = 0;
@@ -12,11 +13,10 @@ var nextBtn = document.querySelector('.next');
 
 window.onbeforeunload = function () {
     window.scrollTo(0, 0);
-
 }
 
 window.addEventListener('scroll', function () {
-    // console.log(this.scrollY);
+    console.log(this.scrollY);
     if (this.scrollY > 20) {
         navBar.classList.add('sticky');
     } else {
@@ -24,46 +24,49 @@ window.addEventListener('scroll', function () {
     }
 },false)
 
-// // Firebase to store contact messages
+// Import the functions you need from the SDKs you need
+// import { initializeApp } from "https://www.gstatic.com/firebasejs/7.15.3/firebase-app.js";
+// TODO: Add SDKs for Firebase products that you want to use
+// https://firebase.google.com/docs/web/setup#available-libraries
 
-// import { initializeApp } from "https://www.gstatic.com/firebasejs/9.1.1/firebase-app.js";
-//   // TODO: Add SDKs for Firebase products that you want to use
-//   // https://firebase.google.com/docs/web/setup#available-libraries
+// Your web app's Firebase configuration
+const firebaseConfig = {
+  apiKey: "AIzaSyAGs7pXpGkNbummJOc1oKD_yBqvDj2k7BE",
+  authDomain: "portfolio-8ec7a.firebaseapp.com",
+  databaseURL: "https://portfolio-8ec7a-default-rtdb.asia-southeast1.firebasedatabase.app",
+  projectId: "portfolio-8ec7a",
+  storageBucket: "portfolio-8ec7a.appspot.com",
+  messagingSenderId: "537574027328",
+  appId: "1:537574027328:web:f45e0a232d64f02aa7afa5"
+};
 
-//   // Your web app's Firebase configuration
-//   const firebaseConfig = {
-//     apiKey: "AIzaSyAGs7pXpGkNbummJOc1oKD_yBqvDj2k7BE",
-//     authDomain: "portfolio-8ec7a.firebaseapp.com",
-//     databaseURL: "https://portfolio-8ec7a-default-rtdb.asia-southeast1.firebasedatabase.app",
-//     projectId: "portfolio-8ec7a",
-//     storageBucket: "portfolio-8ec7a.appspot.com",
-//     messagingSenderId: "537574027328",
-//     appId: "1:537574027328:web:f45e0a232d64f02aa7afa5"
-//   };
+// // Initialize Firebase
+// // const app = initializeApp(firebaseConfig);
 
-//   // Initialize Firebase
-//   firebase.initializeApp(firebaseConfig);
+firebase.initializeApp(firebaseConfig);
 
-//   var nameText = document.querySelector('.name');
-//   var emailText = document.querySelector('.email');
-//   var subjectText = document.querySelector('.subject');
-//   var msgText = document.querySelector('.textarea');
+  
 
-//   function sendData () {
-//       console.log(nameText.value);
-//     firebase.database().ref('portfolio').child('contact').push({
-//         name: nameText.value,
-//         email: emailText.value,
-//         subject: subjectText.value,
-//         msg: msgText.value,
-//     })
+function sendData () {
+    var nameText = document.querySelectorAll('input')[0];
+    var emailText = document.querySelectorAll('input')[1];
+    var subjectText = document.querySelectorAll('input')[2];
+    var msgText = document.querySelector('textarea');
 
-//     nameText.value = "";
-//     emailText.value = "";
-//     subjectText.value = "";
-//     msgText.value = "";
+// console.log(nameText.value);
+    firebase.database().ref('users/' + nameText.value).set({
+        name: nameText.value,
+        email: emailText.value,
+        subject: subjectText.value,
+        msg: msgText.value
+    })
 
-//   }
+    nameText.value = "";
+    emailText.value = "";
+    subjectText.value = "";
+    msgText.value = "";
+
+}
   
 
 // toggle menu / navbar script 
@@ -224,7 +227,7 @@ var widths = [550, 800];
 
 window.addEventListener('resize',function () {
     // console.log('it works');
-    console.log (window.innerWidth);
+    // console.log (window.innerWidth);
     for(var i=0; i<children.length; i++) {
         children[i].style.display = 'none';
     }
@@ -294,7 +297,31 @@ function eraseFun () {
 
 window.addEventListener('DOMContentLoaded', function() {
     if (textArray.length) {setTimeout(typeWriter, newTextDelay)}; 
-})
+});
 
+
+// Set skills ani
+
+var redlineH = document.getElementById('redlineH');
+var redlineC = document.getElementById('redlineC');
+var redlineJ = document.getElementById('redlineJ');
+var redlineP = document.getElementById('redlineP');
+var redlineS = document.getElementById('redlineS');
+
+function setAni () {
+    redlineH.classList.add('redlineH');
+    redlineC.classList.add('redlineC');
+    redlineJ.classList.add('redlineJ');
+    redlineP.classList.add('redlineP');
+    redlineS.classList.add('redlineS');
+
+    setTimeout(() => {
+        redlineH.classList.remove('redlineH');
+        redlineC.classList.remove('redlineC');
+        redlineJ.classList.remove('redlineJ');
+        redlineP.classList.remove('redlineP');
+        redlineS.classList.remove('redlineS');
+    }, 3000);
+}
 
 

@@ -4,6 +4,10 @@
 
 * {margin: 0; padding: 0; box-sizing: border-box; text-decoration: none;}
 
+/* :root {
+    --active: "slide 1s ease";
+} */
+
 html{
     scroll-behavior: smooth;
 }
@@ -311,7 +315,82 @@ section .title::after {
     position: relative;
 }
 
-.skills .skills-content .right .line::before {
+.redlineH {
+    animation: redH 2s ease-in-out;
+}
+
+#redlineH {
+    background-color: crimson;
+    height: 100%;
+    width: 90%;
+}
+
+@keyframes redH {
+    0% {width: 0%;}
+    100% {width: 90%;}
+}
+
+.redlineC {
+    animation: redC 2s ease-in-out;
+}
+
+#redlineC {
+    background-color: crimson;
+    height: 100%;
+    width: 70%;
+}
+
+@keyframes redC {
+    0% {width: 0%;}
+    100% {width: 70%;}
+}
+
+.redlineJ {
+    animation: redJ 2s ease-in-out;
+}
+
+#redlineJ {
+    background-color: crimson;
+    height: 100%;
+    width: 80%;
+}
+
+@keyframes redJ {
+    0% {width: 0%;}
+    100% {width: 80%;}
+}
+
+.redlineP {
+    animation: redP 2s ease-in-out;
+}
+
+#redlineP {
+    background-color: crimson;
+    height: 100%;
+    width: 60%;
+}
+
+@keyframes redP {
+    0% {width: 0%;}
+    100% {width: 60%;}
+}
+
+.redlineS {
+    animation: redS 2s ease-in-out;
+}
+
+#redlineS {
+    background-color: crimson;
+    height: 100%;
+    width: 95%;
+}
+
+@keyframes redS {
+    0% {width: 0%;}
+    100% {width: 95%;}
+}
+
+/* .skills .skills-content .right .line::before {
     content: "";
     position: absolute;
     height: 100%;
@@ -335,7 +414,16 @@ section .title::after {
 
 .skills-content .right .sw::before{
     width: 95%;
-}
+} */
+
+/* @keyframes slide {
+    0% {
+        width: 0%;
+    }
+    100% {
+        width: 100%;
+    }
+}  */
 
 /* PROJECT SECTION STYLING */
 
@@ -364,6 +452,10 @@ section .title::after {
     cursor: pointer;
 }
 
+.project .next:hover, .project .prev:hover {
+    transform: scale(1.2);
+}
+
 .project .prev {
     opacity: 0.5;
 }
@@ -389,6 +481,18 @@ section .title::after {
     margin: 0 10px;
     height: auto;
     cursor: pointer;
+
+    animation: appear 3s ease;
+}
+
+@keyframes appear {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
 }
 
 .project .carousel .card:nth-child(4), .project .carousel .card:nth-child(5), .project .carousel .card:nth-child(6) {
@@ -607,6 +711,10 @@ section .title::after {
     .about .about-content .right {
         flex: 100%;
     }
+
+    .home img {
+        height: 50%;
+    }
  
 }
 
@@ -614,10 +722,6 @@ section .title::after {
     .project .carousel .card {
         width: 45%;
     }
-
-    /* .project .carousel .card:nth-child(2) {
-        display: none;
-    } */
 }
 
 @media (max-width: 690px) {
@@ -659,7 +763,6 @@ section .title::after {
     .contact .contact-content .column {
         margin: 10px 0;
         width: 90%;
-
     }
 }
 
@@ -675,13 +778,4 @@ section .title::after {
     .project .carousel .card {
         width: 95%;
     }
-
-    /* .project .carousel .card {
-        display: none;
-    }
-
-    .project .carousel .card:nth-child(0) {
-        display: block;
-    } */
-
 }

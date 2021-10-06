@@ -16,7 +16,7 @@
     <meta property="og:type" content="article" />
     <meta property="og:url" content="https://arjunrvan.github.io/Portfolio/" />
     <meta property="og:image" content="http://example.com/image.jpg" />
-    <meta property="og:description" content="Description Here" />
+    <meta property="og:description" content="" />
 
     <title>Arjun Rvan</title>
     <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
@@ -36,7 +36,7 @@
                 <ul class="menu">
                     <li><a onclick="closeMenu()" href="#home">Home</a></li>
                     <li><a onclick="closeMenu()"  href="#about">About</a></li>
-                    <li><a onclick="closeMenu()"  href="#skills">Skills</a></li>
+                    <li><a onclick="closeMenu(); setAni();"  href="#skills">Skills</a></li>
                     <li><a onclick="closeMenu()"  href="#project">Projects</a></li>
                     <li><a onclick="closeMenu()"  href="#contact">Contact</a></li>
                 </ul>
@@ -91,35 +91,35 @@
                                 <span>HTML</span>
                                 <span>90%</span>
                             </div>
-                            <div class="line html"></div>
+                            <div class="line html"><div id="redlineH"></div></div>
                         </div>
                         <div class="bars">
                             <div class="info">
                                 <span>CSS</span>
                                 <span>70%</span>
                             </div>
-                            <div class="line css"></div>
+                            <div class="line css"><div id="redlineC"></div></div>
                         </div>
                         <div class="bars">
                             <div class="info">
                                 <span>Javascript</span>
                                 <span>80%</span>
                             </div>
-                            <div class="line js"></div>
+                            <div class="line js"><div id="redlineJ"></div></div>
                         </div>
                         <div class="bars">
                             <div class="info">
                                 <span>Python</span>
                                 <span>60%</span>
                             </div>
-                            <div class="line py"></div>
+                            <div class="line py"><div id="redlineP"></div></div>
                         </div>
                         <div class="bars">
                             <div class="info">
                                 <span>SolidWorks</span>
                                 <span>95%</span>
                             </div>
-                            <div class="line sw"></div>
+                            <div class="line sw"><div id="redlineS"></div></div>
                         </div>
                     </div>
                 </div>
