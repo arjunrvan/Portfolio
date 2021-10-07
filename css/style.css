@@ -364,6 +364,24 @@ section .title::after {
     cursor: pointer;
 }
 
+.soc-icons {
+    margin-top: 20px;
+}
+
+.soc-icons img {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    margin: 0 30px;
+}
+
+/* .soc-icons .fab {
+    margin: 0 30px;
+    color: crimson;
+    font-size: 40px;
+    cursor: pointer;
+} */
+
 /* SKILL SECTION STYLING */
 .skills .title::after {
     content: "What I Know";
@@ -883,5 +901,12 @@ section .title::after {
 
     #progress-cont {
         width: 80%;
+    }
+
+    .soc-icons img {
+        width: 25px;
+        height: 25px;
+        cursor: pointer;
+        margin: 0 15px;
     }
 }

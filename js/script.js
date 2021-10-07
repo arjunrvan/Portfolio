@@ -68,6 +68,12 @@ function closeMenu () {
     if (navBarMenu.classList.contains('active')) {
         navBarMenu.classList.remove('active');
     }
+
+    menuBtn.innerHTML = "<i class='fas fa-bars'></i>";
+    var menuIcon = menuBtn.firstChild;
+    menuIcon.onclick = toggleMenu;
+    openMenu = 1;
+    window.onscroll = function () {};
 }
 
 function toggleMenu () {
