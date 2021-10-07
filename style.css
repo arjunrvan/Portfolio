@@ -82,7 +82,7 @@ html{
     opacity: 0;
 }
 
-#fly {
+/* #fly {
     position: absolute;
     left: 0;
     top: 0;
@@ -91,12 +91,10 @@ html{
 
 .fly-left {
     transform: rotateY(180);
-    /* transform: scaleX(-1); */
 }
 
 .fly-right {
     transform: rotateY(180);
-    /* transform: scaleX(1); */
 }
 
 .fly-up {
@@ -105,7 +103,7 @@ html{
 
 .fly-down {
     transform: rotateZ(30deg);
-}
+} */
 
 /* NAVBAR STYLING */
 .max-width {
