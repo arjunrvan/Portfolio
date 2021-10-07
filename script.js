@@ -356,63 +356,69 @@ function enterSite () {
 
 // Mouse move function
 
-var flyJet = document.getElementById('fly');
+// var flyJet = document.getElementById('fly');
 
-document.addEventListener("mousemove", getMouse);
+// document.addEventListener("mousemove", getMouse);
 
-var flypos = {x:0, y:0};
+// var flypos = {x:0, y:0};
 
-setInterval(followMouse, 50);
+// setInterval(followMouse, 50);
 
-var mouse = {x:0, y:0}; //mouse.x, mouse.y
+// var mouse = {x:0, y:0}; //mouse.x, mouse.y
 
-var dirX = "right";
-var dirY = "down";
+// var dirX = "right";
+// var dirY = "down";
 
-function getMouse(e){
-    mouse.x = e.pageX;
-    mouse.y = e.pageY;
+// function getMouse(e){
+//     mouse.x = e.pageX;
+//     mouse.y = e.pageY;
 
-//Checking directional change
-    if(mouse.x > flypos.x){
-        dirX = "right";
-    } else {
-        dirX = "left";
-    }
+// //Checking directional change
+//     if(mouse.x > flypos.x){
+//         dirX = "right";
+//     } else {
+//         dirX = "left";
+//     }
 
-    if(mouse.y > flypos.y){
-        dirY = "down";
-    } else {
-        dirY = "up";
-    }
-}
+//     if(mouse.y > flypos.y){
+//         dirY = "down";
+//     } else {
+//         dirY = "up";
+//     }
+// }
 
-function followMouse(){
-    //1. find distance X , distance Y
-    var distX = mouse.x - flypos.x;
-    var distY = mouse.y - flypos.y;
-    //Easing motion
-    //Progressive reduction of distance 
-    flypos.x += distX/5;
-    flypos.y += distY/2;
+// function followMouse(){
+//     //1. find distance X , distance Y
+//     var distX = mouse.x - flypos.x;
+//     var distY = mouse.y - flypos.y;
+//     //Easing motion
+//     //Progressive reduction of distance 
+//     flypos.x += distX/5;
+//     flypos.y += distY/2;
     
-    flyJet.style.left = flypos.x + "px";
-    flyJet.style.top = flypos.y + "px";
+//     flyJet.style.left = flypos.x + "px";
+//     flyJet.style.top = flypos.y + "px";
 
+//     // console.log('follow',dirX,dirY);
+//     //Apply css class 
+//     if (dirX == "right"){
+//         // console.log('right')
+//         if (flyJet.classList.contains('fly-left')) {flyJet.classList.remove('fly-left'); }
+//         flyJet.classList.add('fly-right');
+//     } else {
+//         // console.log('left')
+//         if (flyJet.classList.contains('fly-right')) {flyJet.classList.remove('fly-right'); }
+//         flyJet.classList.add('fly-left');        
+//     }
 
-//Apply css class 
-    if (dirX == "right"){
-    flyJet.setAttribute("class", "fly-right");
-    } else {
-    flyJet.setAttribute("class", "fly-left");        
-    }
-
-    if (dirY == "down"){
-        flyJet.setAttribute("class", "fly-down");
-        } else {
-        flyJet.setAttribute("class", "fly-up");        
-        }     
+//     if (dirY == "down"){
+//         if (flyJet.classList.contains('fly-up')) {flyJet.classList.remove('fly-up'); }
+//         flyJet.classList.add('fly-down');
+//     } else {
+//         if (flyJet.classList.contains('fly-down')) {flyJet.classList.remove('fly-down'); }
+//         flyJet.classList.add('fly-up');      
+//     }     
     
-}
+// }
 
 

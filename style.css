@@ -59,7 +59,7 @@ html{
 
 #progress-cont {
     opacity: 0;
-    background-color: none;
+    background-color: transparent;
     border: 1px solid #262626;
     width: 120%;
     height: 20px;
@@ -86,17 +86,17 @@ html{
     position: absolute;
     left: 0;
     top: 0;
+    transform: rotateY(180);
 }
 
 .fly-left {
-    /* transform: rotateY(-90); */
-    transform: scaleX(-1);
-    
+    transform: rotateY(180);
+    /* transform: scaleX(-1); */
 }
 
 .fly-right {
-    /* transform: rotateY(90); */
-    transform: scaleX(1);
+    transform: rotateY(180);
+    /* transform: scaleX(1); */
 }
 
 .fly-up {
