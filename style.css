@@ -8,8 +8,103 @@
     --active: "slide 1s ease";
 } */
 
+
 html{
     scroll-behavior: smooth;
+}
+
+#container {
+    display: none;
+    animation: fadeIn;
+    animation-duration: 5s;
+}
+
+.starting-page, .starting-content {
+    background-color: black;
+    font-family: 'Ubuntu',sans-serif;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.starting-content h1 {
+    color: white;
+    margin: 50px 0;
+    text-align: center;
+}
+
+.starting-content button {
+    color: #fff;
+    display: block;
+    width: 160px;
+    height: 45px;
+    outline: none;
+    font-size: 20px;
+    font-weight: 600;
+    border-radius: 6px;
+    cursor: pointer;
+    flex-wrap: nowrap;
+    background: crimson;
+    border: 2px solid crimson;
+}
+
+.starting-content button:hover {
+    color: crimson;
+    background-color: white;
+    cursor: pointer;
+}
+
+#progress-cont {
+    opacity: 0;
+    background-color: none;
+    border: 1px solid #262626;
+    width: 120%;
+    height: 20px;
+    margin-top: 50px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+}
+
+#progress-bar {
+    background-color: white;
+    width: 0px;
+    height: 80%;
+    border-radius: 10px;
+    box-shadow:0 0 5px #fff,0 0 8px #fff,0 0 12px #fff,0 0 15px red,0 0 25px red;
+}
+
+#progress-text {
+    color: darkgray;
+    opacity: 0;
+}
+
+#fly {
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.fly-left {
+    /* transform: rotateY(-90); */
+    transform: scaleX(-1);
+    
+}
+
+.fly-right {
+    /* transform: rotateY(90); */
+    transform: scaleX(1);
+}
+
+.fly-up {
+    transform: rotateZ(-30deg);
+}
+
+.fly-down {
+    transform: rotateZ(30deg);
 }
 
 /* NAVBAR STYLING */
@@ -786,5 +881,9 @@ section .title::after {
     
     .project .carousel .card {
         width: 95%;
+    }
+
+    #progress-cont {
+        width: 80%;
     }
 }
